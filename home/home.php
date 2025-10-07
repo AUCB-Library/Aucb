@@ -1,0 +1,52 @@
+<?php
+include("../init.php");
+if(!isset($_SESSION[$fns->app_session()])){
+    header("location:".$fns->home());
+}
+if((isset($_GET['p']))&&($_GET['p']=="logout")){
+	$db->update_lastloginactivity($_SESSION[$fns->app_session()]); /*redirects the person to the logout page */
+	unset($_SESSION[$fns->app_session()]);
+	header("location:".$fns->home());
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            just practice
+        </title>
+       <link rel="stylesheet" href="../styles/home.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+       <script src="<?php echo $fns->home();?>/js/jquery.min.js"></script>
+  
+    </head>
+    <body>
+       <div id="dialog" class="dialog">
+			<div id="dialog-content" class="dialog-content">
+				<div class="dialog-info" id="dialog-info"></div>
+			</div>
+		</div>
+       <div class="menu">
+            <ul class="menu-ul">
+                
+                		<p class="center" style="margin-bottom: 20px;"><img src="../styles/assests/logo.png" width="200" /></p>
+
+                <li><i class="fas fa-plus"></i> Dashboard</li>
+                <li class="has-submenu active"> <i class="fa-solid fa-store"></i> 
+                    <a href="inventory.html">Library loan</a>
+                </li>
+                <li> <i class="fa-solid fa-cart-shopping"></i> Books</li>
+                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i> Members
+                </li>
+                
+            </ul>
+            <ul>
+                  <li> <i class="fa-solid fa-cart-shopping"></i> Books</li>
+                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i> Members
+                </li>
+            </ul>
+                 
+               </div>
+                 <div> <h2> <i class="fa-solid fa-clipboard"></i> Dashboard</h2></div>
+            </body>
+</html>
