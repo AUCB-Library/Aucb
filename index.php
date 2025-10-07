@@ -83,4 +83,7 @@ include("init.php");
 		</div>
 		<div id="feedback"></div>
 	</body>
+	<div>
+		<span></span>
+	</div>
 </html>
