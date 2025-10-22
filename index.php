@@ -74,7 +74,15 @@ include("init.php");
 					<span class="input-group-icon"><i class="fa-solid fa-lock"></i></span>
 				</div>
                 <p class="center"><input type="submit" value="Login" style="margin-top:30px;"/></p>
+			
 			</form>
+			
+			<?php
+ echo '<a href="home/home.html">
+      <input type="submit"/>
+  </a>';
+?>
+
 		</div>
 		<div class="feedback-box" style="margin:10px 0px 10px 0px;">
 			<div id="animation">

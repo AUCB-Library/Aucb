@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 include("../init.php");
 if(!isset($_SESSION[$fns->app_session()])){
     header("location:".$fns->home());
@@ -8,7 +8,7 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 	unset($_SESSION[$fns->app_session()]);
 	header("location:".$fns->home());
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,13 +38,11 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
                 <li> <i class="fa-solid fa-cart-shopping"></i> Books</li>
                 <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i> Members
                 </li>
-                
+                 
             </ul>
-            <ul>
-                  <li> <i class="fa-solid fa-cart-shopping"></i> Books</li>
-                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i> Members
-                </li>
-            </ul>
+          
+                 
+            
                  
                </div>
                  <div> <h2> <i class="fa-solid fa-clipboard"></i> Dashboard</h2></div>
