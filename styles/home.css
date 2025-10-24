@@ -10,23 +10,100 @@
 	--color-6: #39a2d8;
 	--color-7: #9ec237;
 	--color-8: #e9791c;
-  --color-9: #161716;
+  --color-9: #000;
+   --bg-color:#f0f5fc;
 	--chat-right-bubble: #d7fdd1;
 	--chat-left-bubble: #fff;
+}
+body{
+	background-color:var(--bg-color)
 }
   
 .menu{
       background-color:var(--color-9);
       color:var(--color-white);
-      width: 250px; 
+      width: 240px; 
       height: 100vh; 
-      background-color: var(--color-9);
       color: white;
       top: 0;
       left: 0;
       padding: 20px;
 }
+
 .menu .menu-ul{
-   line-height:50px;
-   
+   line-height:55px;
+   list-style-type:none;
+   font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+.menu .menu-ul a{
+	text-decoration:none;
+	color:var(--color-white);
+	margin-left:0.5rem;
+    font-size:1.1rem;
+}
+ul h3{
+	margin-left:15px;
+	margin-top:-30px;
+	font-size:1.3rem;
+	
+}.page-container {
+  display: flex;          /* Sidebar and main content side by side */
+}
+
+.menu {
+  width: 250px;           /* Sidebar width */
+  background-color: var(--color-9); /* Example */
+  color: white;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+.log{
+	margin-top:100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f5f5f5;
+   font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size:1.5rem;
+
+}
+
+.selection {
+  margin: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.end{
+	font-size:0.9rem;
+	justify-content:space-between;
+}
+.user-icon .role{
+	margin-left:35px;
+	font-size:20px;
+	font-weight:lighter;
+}
+.list{
+	  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
