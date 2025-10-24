@@ -10,15 +10,19 @@
 	--color-6: #39a2d8;
 	--color-7: #9ec237;
 	--color-8: #e9791c;
-  --color-9: #161716;
+  --color-9: #000;
+   --bg-color:#f0f5fc;
 	--chat-right-bubble: #d7fdd1;
 	--chat-left-bubble: #fff;
+}
+body{
+	background-color:var(--bg-color)
 }
   
 .menu{
       background-color:var(--color-9);
       color:var(--color-white);
-      width: 250px; 
+      width: 240px; 
       height: 100vh; 
       background-color: var(--color-9);
       color: white;
@@ -26,7 +30,45 @@
       left: 0;
       padding: 20px;
 }
+
 .menu .menu-ul{
-   line-height:50px;
-   
+   line-height:55px;
+   list-style-type:none;
+   font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+.menu .menu-ul a{
+	text-decoration:none;
+	color:var(--color-white);
+	margin-left:0.5rem;
+    font-size:1.1rem;
+}
+ul h3{
+	margin-left:15px;
+	margin-top:-30px;
+	font-size:1.3rem;
+	
+}
+.log{
+	margin-top:100%;
+}
+.header-flex{
+	display:flex;
+}
+.user-icon{
+	font-size:2.1rem;
+	margin-top:10px;
+}
+.user-icon i{
+	font-size:2.7rem;
+}
+.user-icon span{
+	margin-top:-20px;
+}
+.user-icon span small{
+	font-size:1.5rem;
+	margin-left:4vw;
+	
 }

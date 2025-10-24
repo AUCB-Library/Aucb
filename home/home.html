@@ -13,38 +13,51 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 <html>
     <head>
         <title>
-            just practice
+            HOME PAGE
         </title>
        <link rel="stylesheet" href="../styles/home.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
        <script src="<?php echo $fns->home();?>/js/jquery.min.js"></script>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   
     </head>
     <body>
+
        <div id="dialog" class="dialog">
 			<div id="dialog-content" class="dialog-content">
 				<div class="dialog-info" id="dialog-info"></div>
 			</div>
 		</div>
+         <div class="header-flex">
+
        <div class="menu">
             <ul class="menu-ul">
                 
                 		<p class="center" style="margin-bottom: 20px;"><img src="../styles/assests/logo.png" width="200" /></p>
+                    <h3>AUCB LIBRARY</h3>
 
-                <li><i class="fas fa-plus"></i> Dashboard</li>
+                <li><i class="fas fa-plus"></i><a href="inventory.html">Dashboard</a></li>
                 <li class="has-submenu active"> <i class="fa-solid fa-store"></i> 
                     <a href="inventory.html">Library loan</a>
                 </li>
-                <li> <i class="fa-solid fa-cart-shopping"></i> Books</li>
-                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i> Members
-                </li>
+                <li> <i class="fa-solid fa-cart-shopping"></i><a href="inventory.html"> Books </a></li>
+                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
+                     <li class="has-submenu active"> <i class="fa-solid fa-book"></i><a href="inventory.html">E- books</a></li>
+                     <li><i class="fa-solid fa-right-to-bracket log"></i> <a href="inventory.html">LOG OUT</a></li>
                  
             </ul>
-          
-                 
             
-                 
-               </div>
-                 <div> <h2> <i class="fa-solid fa-clipboard"></i> Dashboard</h2></div>
+             </div>
+                 <div class="user-icon">
+                      <i class="fa-solid fa-user"></i>
+                      <span>Samuel Aidoo <br>
+                       <small> Student</small>
+                      </span>
+                    
+                </div>
+             </div>
+
             </body>
 </html>
