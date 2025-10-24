@@ -15,12 +15,14 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
         <title>
             HOME PAGE
         </title>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="../styles/home.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
        <script src="<?php echo $fns->home();?>/js/jquery.min.js"></script>
        <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   
     </head>
     <body>
@@ -30,34 +32,159 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 				<div class="dialog-info" id="dialog-info"></div>
 			</div>
 		</div>
-         <div class="header-flex">
+       <div class="page-container">
+  
+  <!-- Sidebar -->
+  <div class="menu">
+    <ul class="menu-ul">
+      <p class="center" style="margin-bottom: 20px;">
+        <img src="../styles/assests/logo.png" width="200" />
+      </p>
+      <h3>AUCB LIBRARY</h3>
 
-       <div class="menu">
-            <ul class="menu-ul">
-                
-                		<p class="center" style="margin-bottom: 20px;"><img src="../styles/assests/logo.png" width="200" /></p>
-                    <h3>AUCB LIBRARY</h3>
+      <li><i class="fas fa-plus"></i><a href="inventory.html">Dashboard</a></li>
+      <li class="has-submenu active">
+        <i class="fa-solid fa-store"></i>
+        <a href="inventory.html">Library loan</a>
+      </li>
+      <li><i class="fa-solid fa-cart-shopping"></i><a href="inventory.html">Books</a></li>
+      <li class="has-submenu active">
+        <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
+      </li>
+      <li class="has-submenu active">
+        <i class="fa-solid fa-book"></i><a href="inventory.html">E-books</a>
+      </li>
+      <li><i class="fa-solid fa-right-to-bracket log"></i><a href="inventory.html">LOG OUT</a></li>
+    </ul>
+  </div>
 
-                <li><i class="fas fa-plus"></i><a href="inventory.html">Dashboard</a></li>
-                <li class="has-submenu active"> <i class="fa-solid fa-store"></i> 
-                    <a href="inventory.html">Library loan</a>
-                </li>
-                <li> <i class="fa-solid fa-cart-shopping"></i><a href="inventory.html"> Books </a></li>
-                <li class="has-submenu active"> <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
-                     <li class="has-submenu active"> <i class="fa-solid fa-book"></i><a href="inventory.html">E- books</a></li>
-                     <li><i class="fa-solid fa-right-to-bracket log"></i> <a href="inventory.html">LOG OUT</a></li>
-                 
-            </ul>
-            
-             </div>
-                 <div class="user-icon">
-                      <i class="fa-solid fa-user"></i>
-                      <span>Samuel Aidoo <br>
-                       <small> Student</small>
-                      </span>
-                    
-                </div>
-             </div>
+  <!-- Main Section -->
+  <div class="main-content">
+
+    <!-- Header (User Info) -->
+    <div class="header">
+      <div class="user-icon">
+        <i class="fa-solid fa-user"></i>
+        <span>Samuel Aidoo<br><span class="role">Admin</span></span>
+      </div>
+      <div class="end">
+        <b>11:00 PM</b><br>
+        <b>23rd September 2023</b>
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      
+    </div>
+
+    <!-- Accumulative Performance Section -->
+    <div class="selection">
+      <h2>Accumulative Performance</h2>
+      <div class="list" style="font-weight:bold;">
+      <span>ID</span>
+      <span>Live ID</span>
+      <span>Name</span>
+      <span>Dear clerk</span>
+      <span>Date & Time</span>
+      </div>
+      <hr>
+
+      <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+ <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+      
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+       <div class="list">
+      <span>001</span>
+      <span>LVE-7843</span>
+      <span>John Smith</span>
+      <span>Emily Brown</span>
+      <span>2025-10-24 09:15 AM</span>
+      </div>
+
+    
+       
+
+    </div>
+
+  </div>
+
+</div>
+
 
             </body>
 </html>
