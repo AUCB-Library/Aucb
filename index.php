@@ -78,7 +78,7 @@ include("init.php");
 			</form>
 			
 			<?php
- echo '<a href="home/home.html">
+ echo '<a href="home/dashboard.html">
       <input type="submit"/>
   </a>';
 ?>

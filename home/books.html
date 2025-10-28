@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+    Books
+        </title>
+          <link rel="icon" type="image/x-icon" href="../styles/assests/logo.png">
+
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../styles/home.css">
+         
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+       <script src="<?php echo $fns->home();?>/js/jquery.min.js"></script>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  
+    </head>
+    <body>
+
+       <div id="dialog" class="dialog">
+			<div id="dialog-content" class="dialog-content">
+				<div class="dialog-info" id="dialog-info"></div>
+			</div>
+		</div>
+       <div class="page-container">
+  
+  <!-- Sidebar -->
+  <div class="menu">
+    <ul class="menu-ul">
+      <p class="center" style="margin-bottom: 20px;">
+        <img src="../styles/assests/logo.png" width="200" />
+      </p>
+      <h3>AUCB LIBRARY</h3>
+
+      <li><i class="fas fa-plus"></i ><a href="dashboard.html">Dashboard</a></li>
+      <li class="has-submenu">
+        <i class="fa-solid fa-user-graduate"></i>
+        <a href="lecup.html">Lecture uploads</a>
+      </li>
+      <li class="active"><i class="fa-solid fa-book-open"></i><a href="books.html">Books</a></li>
+      <li class="has-submenu ">
+        <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
+      </li>
+      <li class="has-submenu ">
+        <i class="fa-solid fa-book"></i><a href="inventory.html">E-books</a>
+      </li>
+      <li><i class="fa-solid fa-right-to-bracket log"></i><a href="/index.php">LOG OUT</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main-content">
+
+    <!-- Header (User Info) -->
+    <div class="header">
+      <div class="user-icon">
+        <i class="fa-solid fa-user"></i>
+        <span>Samuel Aidoo<br><span class="role">Admin</span></span>
+      </div>
+      <div class="end">
+        <b id="time"></b><br>
+        <b id="date">23rd September 2023</b>
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      
+    </div>
+  <div class="search-box">
+    <button class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text" class="input-search">
+  </div>
+
+ <div class="line-up">
+<div class="container">
+  <img src="../styles/assests/book.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+<div class="container">
+  <img src="../styles/assests/book.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+<div class="container">
+  <img src="../styles/assests/book.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+
+
+</div>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      
+      // Format date
+      const date = now.toLocaleDateString('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}); 
+      
+      // Format time
+      const time = now.toLocaleTimeString(); // e.g. "2:35:12 PM"
+      
+      // Display in HTML
+      document.getElementById('date').textContent =  date;
+      document.getElementById('time').textContent =  time;
+    }
+
+    // Update every second
+    setInterval(updateDateTime, 1000);
+
+    // Initial display
+    updateDateTime();
+  </script>
+    </body>
+</html>

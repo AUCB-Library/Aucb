@@ -13,8 +13,9 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 <html>
     <head>
         <title>
-            HOME PAGE
+            Dashboard
         </title>
+        <link rel="icon" type="image/x-icon" href="../styles/assests/logo.png">
         <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="../styles/home.css">
@@ -42,16 +43,16 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
       </p>
       <h3>AUCB LIBRARY</h3>
 
-      <li><i class="fas fa-plus"></i><a href="inventory.html">Dashboard</a></li>
-      <li class="has-submenu active">
+      <li class="active"><i class="fas fa-plus"></i ><a href="dashboard.html ">Dashboard</a></li>
+      <li class="has-submenu">
         <i class="fa-solid fa-store"></i>
-        <a href="inventory.html">Library loan</a>
+        <a href="lecup.html">Lecture uploads</a>
       </li>
-      <li><i class="fa-solid fa-cart-shopping"></i><a href="inventory.html">Books</a></li>
-      <li class="has-submenu active">
+      <li><i class="fa-solid fa-book-open"></i><a href="books.html">Books</a></li>
+      <li class="has-submenu ">
         <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
       </li>
-      <li class="has-submenu active">
+      <li class="has-submenu ">
         <i class="fa-solid fa-book"></i><a href="inventory.html">E-books</a>
       </li>
       <li><i class="fa-solid fa-right-to-bracket log"></i><a href="inventory.html">LOG OUT</a></li>
@@ -68,8 +69,8 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
         <span>Samuel Aidoo<br><span class="role">Admin</span></span>
       </div>
       <div class="end">
-        <b>11:00 PM</b><br>
-        <b>23rd September 2023</b>
+        <b id="time"></b><br>
+        <b id="date"></b>
         <i class="fa-solid fa-gear"></i>
       </div>
       
@@ -185,6 +186,30 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 
 </div>
 
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      
+      // Format date
+      const date = now.toLocaleDateString('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}); 
+      // Format time
+      const time = now.toLocaleTimeString(); // e.g. "2:35:12 PM"
+      
+      // Display in HTML
+      document.getElementById('date').textContent = date;
+      document.getElementById('time').textContent =  time;
+    }
 
-            </body>
+    // Update every second
+    setInterval(updateDateTime, 1000);
+
+    // Initial display
+    updateDateTime();
+  </script>
+ </body>
 </html>
