@@ -25,6 +25,20 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700"
+      rel="stylesheet"
+    />
     </head>
     <body>
 
@@ -50,12 +64,12 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
       </li>
       <li><i class="fa-solid fa-book-open"></i><a href="books.html">Books</a></li>
       <li class="has-submenu ">
-        <i class="fa-solid fa-arrow-trend-up"></i><a href="inventory.html">Members</a>
+        <i class="fa-solid fa-arrow-trend-up"></i><a href="members.html">Members</a>
       </li>
       <li class="has-submenu ">
-        <i class="fa-solid fa-book"></i><a href="inventory.html">E-books</a>
+        <i class="fa-solid fa-book"></i><a href="ebooks.html">E-books</a>
       </li>
-      <li><i class="fa-solid fa-right-to-bracket log"></i><a href="inventory.html">LOG OUT</a></li>
+      <li><i class="fa-solid fa-right-to-bracket log"></i><a href="members.html">LOG OUT</a></li>
     </ul>
   </div>
 
@@ -71,120 +85,70 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
       <div class="end">
         <b id="time"></b><br>
         <b id="date"></b>
-        <i class="fa-solid fa-gear"></i>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
+        
       </div>
       
     </div>
+    <div id="wrapper">
+      <div class="content-area">
+        <div class="container-fluid">
+          <div class="text-right mt-3 mb-3 d-fixed">
+          
+          </div>
+          <div class="main">
+            <div class="row sparkboxes mt-4 mb-4">
+              <div class="col-md-4">
+                <div class="box box1">
+                  <div id="spark1"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box box2">
+                  <div id="spark2"></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box box3">
+                  <div id="spark3"></div>
+                </div>
+              </div>
+            </div>
 
-    <!-- Accumulative Performance Section -->
-    <div class="selection">
-      <h2>Accumulative Performance</h2>
-      <div class="list" style="font-weight:bold;">
-      <span>ID</span>
-      <span>Live ID</span>
-      <span>Name</span>
-      <span>Dear clerk</span>
-      <span>Date & Time</span>
+            <div class="row mt-5 mb-4">
+              <div class="col-md-6">
+                <div class="box">
+                  <div id="bar"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="box">
+                  <div id="donut"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4 mb-4">
+              <div class="col-md-6">
+                <div class="box">
+                  <div id="area"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="box">
+                  <div id="line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <hr>
-
-      <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
- <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-      
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-       <div class="list">
-      <span>001</span>
-      <span>LVE-7843</span>
-      <span>John Smith</span>
-      <span>Emily Brown</span>
-      <span>2025-10-24 09:15 AM</span>
-      </div>
-
-    
-       
-
     </div>
 
-  </div>
-
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="../js/apexcharts.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/script.js"></script>
 
   <script>
     function updateDateTime() {
@@ -210,6 +174,7 @@ if((isset($_GET['p']))&&($_GET['p']=="logout")){
 
     // Initial display
     updateDateTime();
+
   </script>
  </body>
 </html>
