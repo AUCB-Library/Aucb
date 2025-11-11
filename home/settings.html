@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+  Settings
+        </title>
+        <link rel="icon" type="image/x-icon" href="../styles/assests/logo.png">
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../styles/home.css">
+
+       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+         <!-- js files-->
+          
+
+         <!-- font-awesome cdn -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+       
+
+        <!-- fonts cdn -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  
+    </head>
+    <body>
+        <span class="back"> <a href="dashboard.html "> <i class="fa-solid fa-arrow-left"></i></a></span>
+        <div class="container">
+
+  <div id="chart">
+      
+  </div>
+
+  <div class="container-text">
+    <h1> Storage usage</h1>
+        <span> This app has used up 15.7% of your disk space</span>
+    </div>
+
+    </div>
+
+      <div class="container andSome">
+
+
+
+    <div class="settings-container">
+        <nav class="settings-sidebar">
+            <h2>Settings</h2>
+            <ul>
+                <li><a href="#account" class="activee">Account & Profile</a></li>
+                <li><a href="#appearance">Appearance</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#security">Privacy & Security</a></li>
+                <li><a href="#billing">Billing (Dummy)</a></li>
+            </ul>
+        </nav>
+
+        <main class="settings-content">
+            <h1>Settings</h1>
+
+            <section id="account" class="settings-section">
+                <h2>Account & Profile</h2>
+                <div class="setting-item">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" value="user_name_123">
+                </div>
+                <div class="setting-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="user@example.com">
+                </div>
+                <button class="save-button">Save Profile</button>
+            </section>
+
+            <hr>
+
+            <section id="appearance" class="settings-section">
+                <h2>Appearance</h2>
+                <div class="setting-item setting-toggle">
+                    <label>Dark Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option value="en">English (US)</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="danger-zone" class="settings-section">
+                <h2 style="color: darkred;">Danger Zone</h2>
+                <p>Permanently delete your account and all of your data.</p>
+                <button class="delete-button">Delete Account</button>
+            </section>
+
+        </main>
+    </div>
+
+    </div>
+
+<script>  
+
+var options = {
+          series: [44, 55, 13, 43, 22],
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+        </script>
+    </body>
+</html>
