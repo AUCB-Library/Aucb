@@ -3,7 +3,7 @@ include("init.php");
 ?>
 <html>
 	<head>
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/icon.png">	
+	 <link rel="icon" type="image/x-icon" href="/styles/assests/logo.png">
 		<title>Library</title>
 		<meta name="viewport" content="width=device-width, initial-scale=0.7 user-scalable=0">
 		<script src="js/jquery.min.js"></script>

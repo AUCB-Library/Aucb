@@ -11,6 +11,7 @@
 	--color-7: #9ec237;
 	--color-8: #e9791c;
   --color-9: #000;
+  --color-10:#ad591399;
    --bg-color:#f0f5fc;
 	--chat-right-bubble: #d7fdd1;
 	--chat-left-bubble: #fff;
@@ -123,59 +124,6 @@ ul h3{
   font-optical-sizing: auto;
   font-style: normal;
 }
-
-
-.search-box{
-  width: fit-content;
-  height: fit-content;
-  position: relative;
-  margin-left:70%;
-}
-
-.input-search{
-
- height: 45px;
-  width: 45px;
-  border-style: none;
-  font-size: 18px;
-  outline: none;
-  border-radius: 40px;
-  transition: all .5s ease-in-out;
-  background-color: #e77b1de6;
-  color:black;
-
-}
-
-.btn-search{
-  width: 45px;
-  height: 45px;
-  border-style: none;
-  font-size: 20px;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  color:#fff ;
-  background-color:transparent;
-  pointer-events: painted;  
-}
-.btn-search:focus ~ .input-search{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(30, 30, 30, 0.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(26, 26, 26, 0.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-
 
 
 .container {
@@ -485,93 +433,6 @@ ul h3{
   padding-left: 3px;
 }
 
-.search-bar {
-  flex: 2 0 0;
-  align-items: center;
-  justify-content: space-between;
-  background: #232e34;
-  overflow: hidden;
-  display: flex;
-  height: 36px;
-  border-radius: 35px;
-  color: rgba(255,255,255,0.5);
-}
-
-.search-bar-dropdown {
-  flex: 1 0 0;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 18px;
-  margin-right: 15px;
-  background: #2c393f;
-
-}
-.search-bar-input {
-  flex: 2 0 0;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 18px;
-  line-height: 40px;
-  align-items: center;
-}
-
-.search-bar-input input[type="text"] {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  color: rgba(255,255,255,0.5);
-}
-.search-bar-input input:focus{
-  outline: none;
-}
-
-.box.banana_map {
-  color: #fff;
-  background: #eff4f7;
-  padding: 0;
-  box-shadow: none;
-}
-.box.banana_map .title {
-  padding-top: 40px;
-  padding-left: 25px;
-  font-size: 16px;
-}
-.box.banana_map .subtitle {
-  font-weight: 700;
-  padding-top: 10px;
-  padding-left: 25px;
-  font-size: 22px;
-}
-
-.box {
-  max-height: 444px;
-}
-
-.box .banana {
-  min-height: 404px;
-  background-image: url('img/banana.png');
-  background-size: cover;
-}
-.box .map {
-  min-height: 404px;
-  background-image: url('img/map.png');
-  background-size: cover;
-}
-.box .cog-icon {
-  cursor: pointer;
-  position: absolute;
-  right: 55px;
-  top: 25px;
-  z-index: 10;
-}
-
-@media screen and (max-width:760px) {
-  #topnav { flex-wrap: wrap; }
-  .admin-menu { flex-basis: 20%; }
-  .logo { justify-content: flex-end; padding-right: 10px; }
-  .logo { flex-basis: 80%; }
-  .topnav-rightmenu, .search-bar { display: none; }
-}
 
 .box {
   box-shadow: 0px 1px 22px -12px #607D8B;
@@ -882,4 +743,61 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+ 
+  margin-top:50px;
+}
+
+.lecup-card{
+display: grid;
+line-height:40px;
+border:3px solid var(--color-white);
+width:22%;
+margin-left:40px;
+padding-top:5%;
+padding-bottom:5%;
+justify-content:center;
+ font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.lecup-card button{
+    width:100%;
+}
+
+.lecup-card h1{
+  margin-top:-20px;
+}
+
+.lecup-card button{
+  background-color:var(--color-10);
+  color:var(--color-white);
+  border:none;
+  padding:10px;
+  border-radius:5px;
+}
+
+.lecup-card button:hover{
+   background-color:var(--color-8)
+}
+
+
+.lecup-card .capture{
+  background-color:#fffbeb80;
+  color: #6b7280;
+  width:50%;
+}
+
+.book_info{
+  margin-left:20px;
+  line-height:50px;
+    font-family: "Sirin Stencil", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
